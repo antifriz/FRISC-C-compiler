@@ -1,0 +1,555 @@
+		`ORG 400
+		SUB SP,4,SP
+		CALL main
+		ADD SP,4,SP
+		RET
+;mnozenje 2k 4byte registri, spremanje rezultata na stog iznad parametra
+MultiplySigned
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		MOVE 0, R2
+		LOAD R0, (SP+14); ucitaj prvi broj
+		LOAD R1, (SP+10); ucitaj drugi broj
+MULSIG1			SHR R1, 1, R1 ;pomakni drugi broj za 1 udesno
+		JP_NC MULSIG2
+		ADD R0,R2,R2
+MULSIG2		SHL R0,1,R0
+		CMP R1, 0
+		JP_NE MULSIG1 ;rezultat je u R2
+		STORE R2, (SP+10) 
+		POP R2
+		POP R1
+		POP R0
+		RET
+ModuloSigned	PUSH R0
+			PUSH R1
+			PUSH R2
+			PUSH R3
+			PUSH R4 ;boolean za predznak
+			MOVE 0, R4
+			LOAD R1, (SP+1C) ;ucitaj veci ili prvi
+			LOAD R2, (SP+18) ;ucitaj manji ili drugi
+			MOVE 0, R0 ;rezultat se sprema u R0
+			MOVE 1, R3 ;na neki nacin kompas
+			CMP R2, 0
+			JP_EQ MODUSG7 ;ne smijes djeliti sa nulom
+			JP_SGT MODUSG1
+			ADD R4, 1, R4 ;zbroji sa 1 ako je negativno 
+			SUB R0, R2, R2
+MODUSG1			CMP R1, 0 	   ;ako je pozitivan idi MODUSG3 xd
+			JP_SGT MODUSG2
+			ADD R4, 1, R4 ;zbroji sa 1 ako je negativno
+			SUB R0, R1, R1
+
+MODUSG2			CMP R2, R1
+			JP_SGT MODUSG3
+			SHL R2, 1, R2
+			SHL R3, 1, R3
+			JP MODUSG2
+MODUSG3		CMP R1, R2	   ;zelimo da R1>R2
+			JP_SLT MODUSG4 ;ako nije 
+			SUB R1,R2,R1
+			ADD R0,R3,R0
+MODUSG4		SHR R3,1,R3
+			JP_C MODUSG5
+			SHR R2,1,R2
+			JP MODUSG3
+MODUSG5			CMP R4,0
+			JP_EQ MODUSG6
+			MOVE 0, R3
+			SUB R3,R1,R1 ;baci minus na rezultat
+MODUSG6		STORE R1,(SP+1C)
+			POP R4
+			POP R3
+			POP R2
+			POP R1
+			POP R0
+			RET
+MODUSG7		HALT
+DivideSigned	PUSH R0
+			PUSH R1
+			PUSH R2
+			PUSH R3
+			PUSH R4 ;boolean za predznak
+			MOVE 0, R4
+			LOAD R1, (SP+1C) ;ucitaj veci ili prvi
+			LOAD R2, (SP+18) ;ucitaj manji ili drugi
+			MOVE 0, R0 ;rezultat se sprema u R0
+			MOVE 1, R3 ;na neki nacin kompas
+			CMP R2, 0
+			JP_EQ DIVSIG7 ;ne smijes djeliti sa nulom
+			JP_SGT DIVSIG1
+			ADD R4, 1, R4 ;zbroji sa 1 ako je negativno 
+			SUB R0, R2, R2
+DIVSIG1			CMP R1, 0 	   ;ako je pozitivan idi DIVSIG3 xd
+			JP_SGT DIVSIG2
+			ADD R4, 1, R4 ;zbroji sa 1 ako je negativno
+			SUB R0, R1, R1
+
+DIVSIG2			CMP R2, R1
+			JP_SGT DIVSIG3
+			SHL R2, 1, R2
+			SHL R3, 1, R3
+			JP DIVSIG2
+DIVSIG3		CMP R1, R2	   ;zelimo da R1>R2
+			JP_SLT DIVSIG4 ;ako nije 
+			SUB R1,R2,R1
+			ADD R0,R3,R0
+DIVSIG4		SHR R3,1,R3
+			JP_C DIVSIG5
+			SHR R2,1,R2
+			JP DIVSIG3
+DIVSIG5			SHR R4,1,R4
+			JP_NC DIVSIG6
+			MOVE 0, R3
+			SUB R3,R0,R0 ;baci minus na rezultat
+DIVSIG6		STORE R0,(SP+1C)
+			POP R4
+			POP R3
+			POP R2
+			POP R1
+			POP R0
+			RET
+DIVSIG7		HALT
+main  
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		SUB SP, 000000014, SP
+		MOVE const5, R0
+		STORE R0, ( SP + 000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_init
+		ADD SP, 000000004, SP
+		LOAD R0, ( const0 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_writeln
+		ADD SP, 000000004, SP
+		LOAD R0, ( SP + 000000004 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_readln
+		ADD SP, 000000004, SP
+		LOAD R1, ( const1 )
+		STORE R1, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_puts
+		ADD SP, 000000004, SP
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_puts
+		ADD SP, 000000004, SP
+		LOAD R1, ( const2 )
+		STORE R1, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_writeln
+		ADD SP, 000000004, SP
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL atoi
+		POP R1
+		LOAD R2, ( const3 )
+		STORE R2, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_puts
+		ADD SP, 000000004, SP
+		STORE R1, ( SP-4 )
+		STORE R1, ( SP + 000000000 )
+		MOVE 000000002, R2
+		STORE R2, ( SP-8 )
+		SUB SP, 8, SP
+		CALL MultiplySigned
+		ADD SP, 4, SP
+		POP R1
+		STORE R1, ( SP-000000004 )
+		STORE R1, ( SP + 000000010 )
+		STORE R0, ( SP-000000008 )
+		MOVE 00000000A, R1
+		STORE R1, ( SP-00000000C )
+		SUB SP, 00000000C, SP
+		CALL itoa
+		ADD SP, 000000008, SP
+		POP R0
+		STORE R0, ( SP-000000004 )
+		STORE R0, ( SP + 00000000C )
+		SUB SP, 000000004, SP
+		CALL rs_puts
+		ADD SP, 000000004, SP
+		LOAD R0, ( const4 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_writeln
+		ADD SP, 000000004, SP
+		MOVE 000000000, R1
+		STORE R1, ( SP + 000000008 )
+		LOAD R0, ( SP + 000000008 )
+		STORE R0, ( SP + 00000001C )
+		ADD SP, 000000014, SP
+		POP R2
+		POP R1
+		POP R0
+		RET 
+itoa  
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		PUSH R3
+		PUSH R4
+		SUB SP, 000000018, SP
+		MOVE const7, R0
+		STORE R0, ( SP + 000000004 )
+		LOAD R0, ( SP + 000000038 )
+		STORE R0, ( SP + 000000008 )
+		LOAD R1, ( const6 )
+		STORE R1, ( SP + 000000004 )
+		LOAD R1, ( SP + 000000034 )
+		STORE R1, ( SP + 000000000 )
+		CMP R0, 000000000
+		JR_SLT D1239
+		JR_SGE D1240
+D1239  
+		LOAD R0, ( SP + 000000038 )
+		XOR R0, 0FFFFFFFF, R1
+		ADD R1, 000000001, R0
+		STORE R0, ( SP + 000000038 )
+D1240  
+		JR D1228
+D1227  
+		LOAD R0, ( SP + 000000038 )
+		STORE R0, ( SP-4 )
+		LOAD R1, ( SP + 000000030 )
+		STORE R1, ( SP-8 )
+		SUB SP, 8, SP
+		CALL ModuloSigned
+		ADD SP, 4, SP
+		POP R2
+		LOAD R3, ( SP + 000000004 )
+		ADD R3, R2, R4
+		STORE R2, ( SP + 000000014 )
+		LOADB R2, ( R4 )
+		LOAD R3, ( SP + 000000000 )
+		STOREB R2, ( R3 )
+		STOREB R2, ( SP + 000000011 )
+		ADD R3, 000000001, R3
+		STORE R3, ( SP + 000000000 )
+		STORE R0, ( SP-4 )
+		STORE R1, ( SP-8 )
+		SUB SP, 8, SP
+		CALL DivideSigned
+		ADD SP, 4, SP
+		POP R0
+		STORE R0, ( SP + 000000038 )
+D1228  
+		LOAD R0, ( SP + 000000038 )
+		LOAD R1, ( SP + 000000030 )
+		CMP R0, R1
+		JR_SGE D1227
+		JR_SLT D1229
+D1229  
+		LOAD R0, ( SP + 000000004 )
+		LOAD R1, ( SP + 000000038 )
+		ADD R0, R1, R2
+		LOADB R0, ( R2 )
+		LOAD R1, ( SP + 000000000 )
+		STOREB R0, ( R1 )
+		STOREB R0, ( SP + 000000010 )
+		ADD R1, 000000001, R1
+		STORE R1, ( SP + 000000000 )
+		LOAD R0, ( SP + 000000008 )
+		CMP R0, 000000000
+		JR_SLT D1244
+		JR_SGE D1245
+D1244  
+		MOVE 00000002D, R0
+		LOAD R1, ( SP + 000000000 )
+		STOREB R0, ( R1 )
+		ADD R1, 000000001, R1
+		STORE R1, ( SP + 000000000 )
+D1245  
+		MOVE 000000000, R0
+		LOAD R1, ( SP + 000000000 )
+		STOREB R0, ( R1 )
+		LOAD R0, ( SP + 000000034 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL strrev
+		ADD SP, 000000004, SP
+		STORE R0, ( SP + 00000000C )
+		LOAD R0, ( SP + 00000000C )
+		STORE R0, ( SP + 000000038 )
+		ADD SP, 000000018, SP
+		POP R4
+		POP R3
+		POP R2
+		POP R1
+		POP R0
+		RET 
+strrev  
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		PUSH R3
+		SUB SP, 000000020, SP
+		LOAD R0, ( SP + 000000034 )
+		STORE R0, ( SP + 000000004 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL strlen
+		POP R1
+		STORE R1, ( SP + 000000018 )
+		STORE R1, ( SP + 00000001C )
+		LOAD R1, ( SP + 000000018 )
+		ADD R1, 0FFFFFFFF, R2
+		ADD R0, R2, R1
+		STORE R1, ( SP + 000000000 )
+		STORE R2, ( SP + 000000014 )
+		JR D1217
+D1216  
+		LOAD R1, ( SP + 000000004 )
+		LOADB R0, ( R1 )
+		LOAD R3, ( SP + 000000000 )
+		LOADB R2, ( R3 )
+		STOREB R2, ( R1 )
+		STOREB R2, ( SP + 000000010 )
+		STOREB R0, ( R3 )
+		STOREB R0, ( SP + 000000008 )
+		ADD R1, 000000001, R1
+		STORE R1, ( SP + 000000004 )
+		ADD R3, 0FFFFFFFF, R3
+		STORE R3, ( SP + 000000000 )
+D1217  
+		LOAD R0, ( SP + 000000004 )
+		LOAD R1, ( SP + 000000000 )
+		CMP R0, R1
+		JR_SLT D1216
+		JR_SGE D1218
+D1218  
+		LOAD R0, ( SP + 000000034 )
+		STORE R0, ( SP + 00000000C )
+		LOAD R0, ( SP + 00000000C )
+		STORE R0, ( SP + 000000034 )
+		ADD SP, 000000020, SP
+		POP R3
+		POP R2
+		POP R1
+		POP R0
+		RET 
+atoi
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		PUSH R3
+		LOAD R0, (SP+14)
+		MOVE 0, R2
+		
+atoi1
+		SHL R2, 3, R3
+		SHL R2, 1, R2
+		ADD R2, R3, R2
+		ADD R2, R1, R2
+		
+		LOADB R1, (R0)
+		CMP R1,30
+		JR_ULT atoi2
+				
+		CMP R1,39
+		JR_UGT atoi2
+
+		SUB R1, 30, R1
+		ADD R0, 1, R0
+		JR atoi1
+				
+atoi2	
+		STORE R2, (SP+14)			
+		POP R3
+		POP R2
+		POP R1
+		POP R0
+		RET		
+
+ 
+strstr  
+		RET 
+strcpy  
+		RET 
+strcmp  
+		RET 
+strcat  
+		RET 
+strlen
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		LOAD R0, (SP+10)
+			
+		MOVE -1, R2
+strlen1
+		LOADB R1, (R0)
+		ADD R2, 1, R2
+		ADD R0, 1, R0
+		CMP R1, 0
+		JR_NE strlen1
+			
+		STORE R2, (SP+10)
+strlen2			
+		POP R2
+		POP R1
+		POP R0	
+		RET
+ 
+rs_init 
+	RET
+;lokacije rs232
+IO_SIO_BYTE	`EQU	ffffff20	; byte, RW
+IO_SIO_STATUS	`EQU	ffffff21	; byte, RD
+IO_SIO_BAUD	`EQU	ffffff22	; half, WR
+
+; definicije kojekakvih bitmaska
+SIO_TX_BUSY	`EQU	04
+SIO_RX_OVERRUN	`EQU	02
+SIO_RX_FULL	`EQU	01
+	
+ 
+rs_puts
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		LOAD R1, (SP+010)
+
+rs1puts	
+		LOADB R0, (R1)
+		CMP R0, 0
+		JR_Z rs3puts
+		
+rs2puts
+		LOADB R2, (IO_SIO_STATUS)
+		AND R2, SIO_TX_BUSY, R2
+		JR_NZ rs2puts
+		STOREB R0, (IO_SIO_BYTE)	
+		ADD R1, 1, R1
+		JR rs1puts		
+
+rs3puts		
+		POP R2
+		POP R1
+		POP R0
+		RET
+ 
+rs_putc		
+		PUSH R0
+		PUSH R1
+		LOAD R0, (SP+0C)
+		
+rs1putc
+		LOADB R1, (IO_SIO_STATUS)
+		AND R1, SIO_TX_BUSY, R1
+		JR_NZ rs1putc
+		STOREB R0, (IO_SIO_BYTE)
+		POP R1
+		POP R0
+		RET
+ 
+rs_getc  
+		RET 
+;using rs_putc
+;using rs_puts
+rs_writeln
+		PUSH R1
+		
+		LOAD R1, (SP+8) ; txt
+		PUSH R1
+		CALL rs_puts
+
+		MOVE 0A, R1 ; \r
+		STORE R1, (SP)
+		CALL rs_putc
+
+		MOVE 0D,R1 ; \n
+		STORE R1, (SP)
+		CALL rs_putc
+		ADD SP,4,SP
+
+		POP R1
+		RET	
+ 
+;using rs_putc
+rs_readln
+		PUSH R0
+		PUSH R1
+		LOAD R1,(SP+0C)
+		SUB R1,1,R1
+		
+rs1readln
+		LOADB R0, (IO_SIO_STATUS)
+		AND R0, SIO_RX_FULL, R0
+		JR_Z rs1readln
+		LOADB R0, (IO_SIO_BYTE)
+				
+		
+		ADD R1,1,R1
+		CMP R0,0D ; == \r
+		JR_Z rs2readln
+		CMP R0,0A ; == \n
+		JR_Z rs2readln		
+		
+		PUSH R0
+		CALL rs_putc
+		POP R0
+		
+		STOREB R0, (R1)
+		JR rs1readln
+
+rs2readln
+		MOVE 0,R0
+		STOREB R0,(R1)
+		
+		MOVE 0A, R1 ; \r
+		PUSH R1
+		CALL rs_putc
+		MOVE 0D,R1 ; \n
+		STORE R1, (SP)
+		CALL rs_putc
+		ADD SP, 4, SP
+		
+		POP R1
+		POP R0
+		RET
+
+ 
+const0 DW temp_12
+temp_12 DB 00000004B, 00000006F, 00000006C, 000000069
+		DB 00000006B, 00000006F, 000000020, 000000069
+		DB 00000006D, 000000061, 000000073, 000000020
+		DB 000000067, 00000006F, 000000064, 000000069
+		DB 00000006E, 000000061, 000000020, 000000070
+		DB 000000069, 000000074, 000000061, 000000068
+		DB 000000020, 000000074, 000000065, 00000003F
+		DB 000000000, 000000000, 000000000, 000000000
+const1 DW temp_13
+temp_13 DB 000000049, 00000006D, 000000061, 000000073
+		DB 000000020, 000000000, 000000000, 000000000
+const2 DW temp_14
+temp_14 DB 000000020, 000000067, 00000006F, 000000064
+		DB 000000069, 00000006E, 000000061, 000000000
+const3 DW temp_15
+temp_15 DB 00000005A, 000000061, 000000020, 000000031
+		DB 000000030, 000000020, 000000067, 00000006F
+		DB 000000064, 000000069, 00000006E, 000000061
+		DB 000000020, 000000069, 00000006D, 000000061
+		DB 000000074, 000000069, 000000020, 000000063
+		DB 000000065, 000000073, 000000020, 000000000
+const4 DW temp_16
+temp_16 DB 000000020, 000000067, 00000006F, 000000064
+		DB 000000069, 00000006E, 000000061, 000000000
+const5 DW temp_17
+temp_17 `DS 80
+const6 DW temp_18
+temp_18 DB 000000030, 000000031, 000000032, 000000033
+		DB 000000034, 000000035, 000000036, 000000037
+		DB 000000038, 000000039, 000000061, 000000062
+		DB 000000063, 000000064, 000000065, 000000066
+		DB 000000000, 000000000, 000000000, 000000000
+const7 DW temp_19
+temp_19 `DS 16

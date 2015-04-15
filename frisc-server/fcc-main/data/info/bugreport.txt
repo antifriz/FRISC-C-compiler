@@ -1,0 +1,9 @@
+u globalnoj varijabli nije moguce:
+int a[23] = {1,2};
+tj moguce je ali ce se tretirati kao:
+int a[23];
+
+brojevi out of range?
+
+float?
+

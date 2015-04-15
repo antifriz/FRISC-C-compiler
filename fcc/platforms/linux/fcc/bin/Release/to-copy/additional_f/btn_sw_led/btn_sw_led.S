@@ -1,0 +1,13 @@
+btn_sw_led
+		RET
+
+IO_LED		`EQU	ffffff10	; byte, WR
+IO_PUSHBTN	`EQU	ffffff10	; byte, RD
+IO_DIPSW	`EQU	ffffff11	; byte, RD
+
+BTN_CENTER	`EQU	10
+BTN_UP		`EQU	08
+BTN_DOWN	`EQU	04
+BTN_LEFT	`EQU	02
+BTN_RIGHT	`EQU	01
+

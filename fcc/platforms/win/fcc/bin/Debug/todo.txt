@@ -1,0 +1,28 @@
+Log date: 10/12/2013
+Version: v0.9.4.1.light W7/XP
+Author: ivan.jurin@fer.hr
+
+Tested on:
+-Windows 7
+-Windows XP SP2
+-linux version soon...
+
+Checking:
+-check installation procedure
+-check importing procedure
+-check built-in functions reliability
+
+To implement:
+-warn about backuping .bash_profile (.bash_profile_old at importing but 
+ overwrites last one)
+-function calls with arrays as parameters for functions 
+ (i.e. 'f(a[i]);' in gimple is left as is)
+-add all built-in functions
+
+Left unimplemented:
+-arrays of more than one dimension unimplemented
+-switch unimplemented
+-structs unimplemented
+-typedef unimplemented
+-declaring variable as extern not directly implement but there is high 
+ possibility it functions as it should (needs to be checked)

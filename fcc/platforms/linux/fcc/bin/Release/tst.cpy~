@@ -1,0 +1,91 @@
+		`ORG 400
+		SUB SP,4,SP
+		CALL main
+		ADD SP,4,SP
+		RET
+main  
+		PUSH R0
+		PUSH R1
+		SUB SP, 000000020, SP
+		ADD SP, 000000004, R0
+		STORE R0, ( SP + 000000000 )
+		MOVE 000000000, R0
+		STOREB R0, ( SP + 00000001E )
+		MOVE 000000061, R0
+		STOREB R0, ( SP + 00000001D )
+		MOVE 00000006C, R0
+		STOREB R0, ( SP + 00000001C )
+		MOVE 000000062, R0
+		STOREB R0, ( SP + 00000001B )
+		MOVE 000000061, R0
+		STOREB R0, ( SP + 00000001A )
+		MOVE 00000006C, R0
+		STOREB R0, ( SP + 000000019 )
+		MOVE 000000062, R0
+		STOREB R0, ( SP + 000000018 )
+		ADD SP, 000000018, R0
+		STORE R0, ( SP + 000000014 )
+		LOAD R0, ( SP + 000000014 )
+		STORE R0, ( SP + 000000000 )
+		SUB SP, 000000004, SP
+		CALL rs_init
+		ADD SP, 000000004, SP
+		LOAD R0, ( SP + 000000000 )
+		STORE R0, ( SP-000000004 )
+		SUB SP, 000000004, SP
+		CALL rs_puts
+		ADD SP, 000000004, SP
+		MOVE 000000000, R1
+		STORE R1, ( SP + 000000010 )
+		LOAD R0, ( SP + 000000010 )
+		STORE R0, ( SP + 000000024 )
+		ADD SP, 000000020, SP
+		POP R1
+		POP R0
+		RET 
+rs_init 
+	RET
+;lokacije rs232
+IO_SIO_BYTE	`EQU	ffffff20	; byte, RW
+IO_SIO_STATUS	`EQU	ffffff21	; byte, RD
+IO_SIO_BAUD	`EQU	ffffff22	; half, WR
+
+; definicije kojekakvih bitmaska
+SIO_TX_BUSY	`EQU	04
+SIO_RX_OVERRUN	`EQU	02
+SIO_RX_FULL	`EQU	01
+	
+ 
+rs_puts
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		LOAD R1, (SP+010)
+
+rs1puts	
+		LOADB R0, (R1)
+		CMP R0, 0
+		JR_Z rs3puts
+		
+rs2puts
+		LOADB R2, (IO_SIO_STATUS)
+		AND R2, SIO_TX_BUSY, R2
+		JR_NZ rs2puts
+		STOREB R0, (IO_SIO_BYTE)	
+		ADD R1, 1, R1
+		JR rs1puts		
+
+rs3puts		
+		POP R2
+		POP R1
+		POP R0
+		RET
+ 
+rs_putc  
+		RET 
+rs_getc  
+		RET 
+rs_writeln  
+		RET 
+rs_readln  
+		RET 

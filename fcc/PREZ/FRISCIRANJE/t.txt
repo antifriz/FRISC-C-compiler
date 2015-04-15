@@ -1,0 +1,64 @@
+
+C:\Users\Ivan\Documents\atlas\FRISCIRANJE>echo ----------------------------------------------------------- 
+-----------------------------------------------------------
+
+C:\Users\Ivan\Documents\atlas\FRISCIRANJE>echo Converting program to .mem format 
+Converting program to .mem format
+Opening input file: vj0.p
+Opening output file: vj00.mem
+Writing block of code at:0x0000
+112 bytes.
+Writing block of code at:0xF0002
+4 bytes.
+Writing block of code at:0x0070
+52 bytes.
+Writing block of code at:0xD1372
+4 bytes.
+Writing block of code at:0x00A4
+60 bytes.
+Writing block of code at:0xD1394
+4 bytes.
+Writing block of code at:0x00E0
+156 bytes.
+Writing block of code at:0xD1395
+4 bytes.
+Writing block of code at:0x017C
+12 bytes.
+Writing block of code at:0xD1373
+4 bytes.
+Writing block of code at:0x0188
+36 bytes.
+Writing block of code at:0xD1374
+4 bytes.
+Writing block of code at:0x01AC
+4 bytes.
+Writing block of code at:0xD1375
+4 bytes.
+Writing block of code at:0x01B0
+40 bytes.
+Writing block of code at:0xD1405
+4 bytes.
+Writing block of code at:0x01D8
+148 bytes.
+Writing block of code at:0xD1406
+4 bytes.
+Writing block of code at:0xD1376
+4 bytes.
+Writing block of code at:0x026C
+16 bytes.
+Writing block of code at:0xD1377
+4 bytes.
+Writing block of code at:0x027C
+108 bytes.
+Written 788 bytes in total.
+Address space used: 744 (02E8) bytes.
+Check not to exceed address space size.
+Finished.
+
+Running data2mem
+
+ERROR:Data2MEM:11 - Unexpected symbol ',', 'valid data value' expected.
+   Line #219, File "vj00.mem".
+00 00 DB 000000000,
+                  ^
+

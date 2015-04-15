@@ -1,0 +1,27 @@
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\Compiler3_0.CEditor.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\Compiler3_0.MainWindow.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\Compiler3_0.Properties.Resources.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\Compiler3.0.csproj.GenerateResource.Cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\installCygwin\setup-x86.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\.atlaspar
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\.startxwinrc
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\DivideSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\DivideUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\FloatToSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\FloatToUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\functList.p
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\ModuloSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\ModuloUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\MultiplySigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\MultiplyUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\AtlasTemplate.bat
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Release\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\ToCopy\IO.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\LCDclearA.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\LCDprintW.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\LCDshiftA.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Release\data\Additional Functions\LCDcaretM.a

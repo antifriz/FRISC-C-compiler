@@ -1,0 +1,8 @@
+ADDRESS_BLOCK ramb_inst RAMB16 [0x00000000:0x001FFF]
+	BUS_BLOCK
+        RAMB_00_inst [7:0] PLACED = X0Y6 ; 
+        RAMB_01_inst [15:8] PLACED = X0Y7 ;
+        RAMB_02_inst [23:16] PLACED = X0Y5 ;
+        RAMB_03_inst [31:24] PLACED = X0Y8 ;               
+	END_BUS_BLOCK;
+END_ADDRESS_BLOCK;

@@ -1,0 +1,75 @@
+/*
+ -------------------------------------------------------------------------------
+ # --
+ # -- Copyright 2013 Ivan Jurin, University of Zagreb
+ # --
+ # -- Redistribution and use in source and binary forms, with or without
+ # -- modification, are permitted provided that the following conditions
+ # -- are met:
+ # -- 1. Redistributions of source code must retain the above copyright
+ # --    notice, this list of conditions and the following disclaimer.
+ # -- 2. Redistributions in binary form must reproduce the above copyright
+ #
+ # --    notice, this list of conditions and the following disclaimer in the
+ # --    documentation and/or other materials provided with the distribution.
+ # --
+ # -- THIS SOFTWARE IS PROVIDED BY AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ # -- ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ # -- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ # -- ARE DISCLAIMED.  IN NO EVENT SHALL AUTHOR OR CONTRIBUTORS BE LIABLE
+ # -- FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ # -- DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ # -- OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ # -- HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ # -- LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ # -- OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ # -- SUCH DAMAGE.
+ # --
+ #
+ # -- $Id: style.css  6.3.2014 ivan.jurin@fer.hr $
+ #-------------------------------------------------------------------------------
+ */
+div.wholeBundle {
+    width: 100px;
+    margin: 0 auto;
+}
+
+#form-content {
+margin-top: 10px;
+height: 490px;
+}
+.original {
+float: left;
+margin-left: 10px;
+}
+.changed {
+float: right;
+margin-right: 10px;
+}
+.original textarea, .changed textarea {
+width: 100%;
+height: 380px;
+}
+/*
+.SI-FILES-STYLIZED label.cabinet
+{
+    width: 200px;
+    height: 200px;
+    background-image: url("../res/img/Upload_img.png");
+    display: block;
+    overflow: hidden;
+}
+
+.SI-FILES-STYLIZED label.cabinet input.file
+{
+    position: relative;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}*/
+#spread{
+    margin: 0;
+    background:#ccc;
+}

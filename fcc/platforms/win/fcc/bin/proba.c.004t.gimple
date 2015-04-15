@@ -1,0 +1,22 @@
+main ()
+{
+  int D.1594;
+  char * p;
+  char * r;
+  char q;
+  char s[20];
+  char t[20];
+  char s[6];
+  char t[5];
+
+  p = "mate";
+  q = 115;
+  s = "stipe";
+  t = "mate";
+  s = "stipe";
+  t = "mate";
+  D.1594 = 0;
+  return D.1594;
+}
+
+

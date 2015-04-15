@@ -1,0 +1,12 @@
+rs_getc
+		PUSH R0
+
+rs1getc
+		LOADB R0, (IO_SIO_STATUS)
+		AND R0, SIO_RX_FULL, R0
+		JR_Z rs1getc
+		LOADB R0, (IO_SIO_BYTE)
+		STORE R0, (SP+08)
+
+		POP R0
+		RET

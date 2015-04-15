@@ -1,0 +1,13 @@
+rs_putc		
+		PUSH R0
+		PUSH R1
+		LOAD R0, (SP+0C)
+		
+rs1putc
+		LOADB R1, (IO_SIO_STATUS)
+		AND R1, SIO_TX_BUSY, R1
+		JR_NZ rs1putc
+		STOREB R0, (IO_SIO_BYTE)
+		POP R1
+		POP R0
+		RET

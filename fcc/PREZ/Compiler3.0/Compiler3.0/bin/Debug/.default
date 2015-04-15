@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefaultValues xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <userPath>C:\cygwin\home\Ivan</userPath>
+  <cygwinPath>C:\cygwin</cygwinPath>
+  <atlasPath>C:\Program Files (x86)\Atlas\cygwin</atlasPath>
+</DefaultValues>

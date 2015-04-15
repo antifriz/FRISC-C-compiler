@@ -1,0 +1,15 @@
+LCDshiftA	PUSH R0
+		
+LCDSHA1	LOAD R0, (0FFFFF008)
+		AND R0, 1, R0
+		JP_Z LCDSHA1
+		
+		LOAD R0, (SP+8)
+		AND R0,7,R0
+		SHL R0,3,R0
+		STORE R0, (0FFFFF004)
+		
+	
+		
+		POP R0
+		RET

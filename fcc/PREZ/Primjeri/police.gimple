@@ -1,0 +1,162 @@
+main ()
+{
+  char * a.0;
+  int i.1;
+  int i.2;
+  int i.3;
+  char * b.4;
+  int i.5;
+  int i.6;
+  int i.7;
+  int D.1426;
+
+  <D.1416>:
+  a.0 = a;
+  LCDprintA (a.0);
+  i = 0;
+  goto <D.1411>;
+  <D.1410>:
+  i.1 = i;
+  i.2 = i.1 + 1;
+  i = i.2;
+  <D.1411>:
+  i.3 = i;
+  if (i.3 <= 39999) goto <D.1410>; else goto <D.1412>;
+  <D.1412>:
+  b.4 = b;
+  LCDprintA (b.4);
+  i = 0;
+  goto <D.1414>;
+  <D.1413>:
+  i.5 = i;
+  i.6 = i.5 + 1;
+  i = i.6;
+  <D.1414>:
+  i.7 = i;
+  if (i.7 <= 39999) goto <D.1413>; else goto <D.1415>;
+  <D.1415>:
+  goto <D.1416>;
+  D.1426 = 0;
+  return D.1426;
+}
+
+
+delay (int clocks)
+{
+
+  clocks = clocks << 5;
+  goto <D.1403>;
+  <D.1402>:
+  clocks = clocks - 1;
+  <D.1403>:
+  if (clocks > 0) goto <D.1402>; else goto <D.1404>;
+  <D.1404>:
+}
+
+
+LCDcaretM (int position)
+{
+
+}
+
+
+LCDshiftA (int shift)
+{
+
+}
+
+
+LCDprintW (char c3, char c2, char c1, char c0)
+{
+
+}
+
+
+LCDclearA ()
+{
+
+}
+
+
+LCDprintA (char * string)
+{
+  char D.1428;
+  char D.1431;
+  int D.1432;
+  char D.1433;
+  int D.1434;
+  char D.1435;
+  int D.1436;
+  char D.1437;
+  int D.1438;
+  char D.1441;
+  char D.1445;
+  int D.1446;
+  char D.1447;
+  int D.1448;
+  char D.1449;
+  int D.1450;
+  char D.1451;
+  int D.1452;
+  char c[4];
+  int i;
+  int j;
+
+  i = 0;
+  j = 0;
+  LCDclearA ();
+  goto <D.1378>;
+  <D.1377>:
+  D.1428 = *string;
+  c[i] = D.1428;
+  i = i + 1;
+  if (i == 4) goto <D.1429>; else goto <D.1430>;
+  <D.1429>:
+  D.1431 = c[3];
+  D.1432 = (int) D.1431;
+  D.1433 = c[2];
+  D.1434 = (int) D.1433;
+  D.1435 = c[1];
+  D.1436 = (int) D.1435;
+  D.1437 = c[0];
+  D.1438 = (int) D.1437;
+  LCDprintW (D.1438, D.1436, D.1434, D.1432);
+  j = j + 1;
+  if (j == 4) goto <D.1439>; else goto <D.1440>;
+  <D.1439>:
+  LCDcaretM (40);
+  <D.1440>:
+  i = 0;
+  <D.1430>:
+  string = string + 1;
+  <D.1378>:
+  D.1441 = *string;
+  if (D.1441 != 0) goto <D.1442>; else goto <D.1379>;
+  <D.1442>:
+  if (j <= 7) goto <D.1377>; else goto <D.1379>;
+  <D.1379>:
+  goto <D.1381>;
+  <D.1380>:
+  c[i] = 32;
+  i = i + 1;
+  if (i == 4) goto <D.1443>; else goto <D.1444>;
+  <D.1443>:
+  D.1445 = c[3];
+  D.1446 = (int) D.1445;
+  D.1447 = c[2];
+  D.1448 = (int) D.1447;
+  D.1449 = c[1];
+  D.1450 = (int) D.1449;
+  D.1451 = c[0];
+  D.1452 = (int) D.1451;
+  LCDprintW (D.1452, D.1450, D.1448, D.1446);
+  <D.1444>:
+  <D.1381>:
+  if (i <= 3) goto <D.1453>; else goto <D.1382>;
+  <D.1453>:
+  if (i > 0) goto <D.1380>; else goto <D.1382>;
+  <D.1382>:
+  LCDcaretM (24);
+}
+
+

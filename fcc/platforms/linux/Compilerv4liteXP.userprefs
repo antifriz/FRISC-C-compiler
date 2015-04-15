@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="fcc/Gcc.cs">
+    <Files>
+      <File FileName="fcc/Compiler.cs" Line="9" Column="6" />
+      <File FileName="fcc/Register.cs" Line="1" Column="1" />
+      <File FileName="fcc/Variable.cs" Line="16" Column="34" />
+      <File FileName="fcc/Command.cs" Line="5" Column="12" />
+      <File FileName="fcc/Program.cs" Line="127" Column="22" />
+      <File FileName="fcc/Error.cs" Line="18" Column="17" />
+      <File FileName="fcc/AppData.cs" Line="8" Column="53" />
+      <File FileName="fcc/Gcc.cs" Line="83" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="fcc" expanded="True">
+            <Node name="Gcc.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,59 @@
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\installCygwin\setup-x86.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\delay.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\FIQ.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\GPIO_B.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\IRQ.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\LCD.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\string.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\.atlaspar
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\.startxwinrc
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\DivideSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\DivideUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\FIQ.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\FloatToSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\FloatToUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\functList.p
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\InitGPIOB.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\IRQ.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\LCDcaretM.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\LCDclearA.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\LCDprintW.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\LCDshiftA.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\ModuloSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\ModuloUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\MultiplySigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\Additional Functions\MultiplyUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\AtlasTemplate.bat
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\fcc.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\fcc.pdb
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Release\fcc.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Release\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\help.txt
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\installCygwin\setup-x86.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\delay.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\FIQ.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\GPIO_B.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\IRQ.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\LCD.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\ToCopy\string.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\todo.txt
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\fcc.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Release\fcc.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Release\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\DivideSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\DivideUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\FloatToSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\FloatToUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\additional_f\InitGPIOB.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\additional_f\LCDcaretM.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\additional_f\LCDclearA.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\additional_f\LCDprintW.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\additional_f\LCDshiftA.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\ModuloSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\ModuloUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\MultiplySigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Release\data\predefined\built-in_f\MultiplyUnsigned.a
+C:\Users\Ivan\Dropbox\lastest\Compilerv4liteXP\fcc\obj\Release\fcc.exe
+C:\Users\Ivan\Dropbox\lastest\Compilerv4liteXP\fcc\obj\Release\fcc.pdb

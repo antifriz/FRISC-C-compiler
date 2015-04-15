@@ -1,0 +1,14 @@
+globalna varijabla:
+
+char buffer[80]="Upisi koliko si imao iz mat: ";
+
+
+`DS radi kako spada ali ima cudan ispis
+
+LOAD R1, (labela + broj) nema smisla zasto ne bi radilo
+
+LOAD R1, (R1 + labela + broj) takoder
+
+extender pri LOADB
+
+sredi pridruzivanje pocetnih vrijednosti!

@@ -1,0 +1,16 @@
+
+Options:
+
+-o <file>                     Place the output into <file>.
+-cygwin-install <path>        Install cygwin to <path>.
+-cygwin-import <dir>          Import cygwin from <dir>.
+-cygwin-mirror <url>          Download cygwin from <url>. 
+                              (Use if default mirror fails)
+-import-user-headers <dir>    Import user-created headers 
+                               located in <dir>.
+-import-system-headers <dir>  Add headers located in <dir> 
+                               to default ones.
+-print-sys-headers-path       Import user-created headers 
+                               located in <dir>.
+--todo                        Show current version overview.
+--help                        Show this manual.

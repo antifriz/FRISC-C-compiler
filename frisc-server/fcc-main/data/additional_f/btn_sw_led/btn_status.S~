@@ -1,0 +1,7 @@
+;using btn_sw_led
+btn_status
+		PUSH R0
+		LOAD R0, (IO_LED)
+		STORE R0, (SP+8)
+		POP R0
+		RET

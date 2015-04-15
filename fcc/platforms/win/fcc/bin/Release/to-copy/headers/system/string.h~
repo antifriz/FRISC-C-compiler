@@ -1,0 +1,40 @@
+#if !defined(NULL)
+    #define NULL ((void*)0)
+#endif
+
+int strlen(char * s);
+char * strcat (char * d, char * s);
+int strcmp(char * a, char * b);
+char * strcpy(char * d, char * s);
+char * strstr(char * d, char * s);
+char * strrev(char * s);
+char * itoa(char * c, int broj);
+int atoi(char * c);
+//
+//
+//
+
+int strlen(char * s)
+{
+}
+char * strcat (char * d, char * s)
+{
+}
+int strcmp(char * a, char * b)
+{
+}
+char * strcpy(char * d, char * s)
+{
+}
+char * strstr(char * d, char * s)
+{
+}
+int atoi(char * c)
+{
+}
+char *strrev(char * s)
+{
+}
+char *itoa(char * c, int broj)
+{
+}

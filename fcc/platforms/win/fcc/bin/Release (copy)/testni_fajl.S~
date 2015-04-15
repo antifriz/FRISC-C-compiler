@@ -1,0 +1,413 @@
+;fajl fb_data.S
+fb_data
+FB_IO			`EQU	0FFFFFF40 
+
+FB_W			`EQU	200 
+FB_W_C		`EQU	001FA  
+
+FB_START	`EQU	40000 
+FB_END		`EQU	64000
+
+FB_T_M		`EQU	2000 ; top margin 
+FB_L_M		`EQU	10 ; left margin 
+
+
+
+					`ORG 	400 
+    
+;fajl fb_init.S
+fb_init
+					;PUSH R0
+					MOVE FB_START, R0 
+					STORE R0, (FB_IO)	 
+					;POP R0
+					;RET          	 
+
+
+					MOVE 10828, R1 
+                        
+                        
+					CALL FB_CLEAR 
+                        
+					MOVE 10888, R1 
+					CALL PUT_DOT 
+                        
+					MOVE TXT_BUFF,R1 
+                       
+KREN	 
+					LOADB R0,(R1) 
+					CMP R0,0 
+					JR_Z KRAJ 
+					CALL PUT_CHAR 
+					ADD R1,1,R1	 
+					JR KREN 
+                       	 
+KRAJ	 
+                       	 
+RET 
+                       	 
+FB_CLEAR 
+					PUSH R0 
+					PUSH R1 
+					PUSH R3 
+                       	 
+					MOVE 63000,R3 
+					MOVE %H00,R0 
+					MOVE FB_START,R1 
+
+
+KRENI 
+					STOREB R0,(R1) 
+					ADD R1,1,R1 
+					CMP R1,R3 
+					JP_NZ KRENI 
+                       	 
+					POP R3 
+					POP R1 
+					POP R0 
+					RET 
+                        
+CARET_UP 
+					RET 
+                        
+CARET_DOWN 
+					RET 
+                      	 
+CARET_LEFT 
+					RET 
+                       	 
+CARET_RIGHT 
+					PUSH R1 
+					PUSH R0 
+					MOVE TEXT_PTR,R0 
+					LOAD R1, (R0) 
+					ADD R1,6,R1 ; vel. chara 
+					STORE R1,(R0) 
+					POP R0 
+					POP R1 
+					RET 
+                       	 
+DEL_CHAR 
+					RET 
+            	 
+PUT_CHAR 
+					;R0 stavi na ekran 
+					;CMP R0,20 
+					;RET_N 
+                       	 
+					PUSH R1 
+					MOVE TEXT_PTR,R1 
+					LOAD R1, (R1) 
+					CALL PUT_CHAR_RAW 
+					CALL CARET_RIGHT 
+					POP R1 
+					RET 
+                        
+PUT_DOT 
+                       	;bijela tocka na poz R1=poz 
+					PUSH R0
+         	 
+					MOVE 0FF,R0 
+					STOREB R0,(R1+FB_START) 
+                       	 
+					POP R0 
+					RET 
+                       	 
+PUT_CHAR_RAW 
+                       	;char R0 na poz R1, R0 MORA biti >= 0x20 
+					PUSH R4 
+					PUSH R3 
+					PUSH R2 
+					PUSH R1 
+					PUSH R0 
+                       	 
+					SUB R0,20,R0 ; char-32 kontrolna znaka 
+                        
+					SHL R0,2,R2 
+                        
+					LOAD R2,(R2+CHR_1) ; ucitaj prvi dio 
+                       	 
+                       	 
+					MOVE 5,R4 
+CP2	
+					;ispisi redak
+					MOVE 6,R3
+CP1
+					SHL R2,1,R2
+					CALL_C FB_PUT_DOT
+					ADD R1,1,R1
+					SUB R3,1,R3
+					JR_NZ CP1
+	
+					;novi redak
+					ADD R1,FB_W_C,R1
+	
+					SUB R4,1,R4
+					JR_NZ CP2
+	
+	
+					;krnji redak
+					SHL R2,1,R2
+					CALL_C FB_PUT_DOT
+					ADD R1,1,R1
+					SHL R2,1,R2
+					CALL_C FB_PUT_DOT
+					ADD R1,1,R1
+		
+					SHL R0,2,R2
+	
+					POP R0
+					POP R1
+					POP R2
+					POP R3
+					POP R4
+					RET
+	
+					LOADH R2,(R2+CHR_2) ; ucitaj drugi dio
+	
+					SHL R2,10,R2
+		
+					;MOVE 500,R4
+					;STORE R4, (R4)
+
+	
+					;ispisi ostatak krnjeg
+					MOVE 4,R3
+	
+
+	
+CP5
+					SHL R2,1,R2
+					CALL_C FB_PUT_DOT
+					ADD R1,1,R1
+	
+					SUB R3,1,R3
+					JR_NZ CP5	
+	
+					;preostalo
+	
+					MOVE 2,R4
+CP4	
+					;ispisi redak
+					MOVE 6,R3
+CP3	
+					SHL R2,1,R2
+					CALL FB_PUT_DOT
+					ADD R1,1,R1
+					SUB R3,1,R3
+					JR_NZ CP3
+	
+					;novi redak
+					ADD R1,FB_W,R1
+	
+					SUB R4,1,R4
+					JR_NZ CP4		
+
+					POP R0
+					POP R1
+					POP R2
+					POP R3
+					POP R4
+					RET
+                        
+TEXT_PTR DW 10878 
+                        
+TXT_BUFF DB 42,6f,6b,21,6b,20,4a,61,20,73,61,6d,20,6d,61,6c,69,20
+      
+ CHR_1
+ DW 00000000
+ DW 10E38410
+ DW 6DB48000
+ DW 00A7CA29
+ DW 20E40C09
+ DW 65908421
+ DW 21450855
+ DW 30C20000
+ DW 10820820
+ DW 20410410
+ DW 00A39F38
+ DW 00411F10
+ DW 00000000
+ DW 00001F00
+ DW 00000000
+ DW 00108421
+ DW 3914D565
+ DW 10C10410
+ DW 39104621
+ DW 39104E05
+ DW 0862927C
+ DW 7D041E05
+ DW 18841E45
+ DW 7C108420
+ DW 39144E45
+ DW 39144F04
+ DW 00030C00
+ DW 00030C00
+ DW 08421020
+ DW 0007C001
+ DW 20408108
+ DW 39104610
+ DW 3915D55D
+ DW 3914517D
+ DW 79145E45
+ DW 39141041
+ DW 79145145
+ DW 7D041E41
+ DW 7D041E41
+ DW 39141745
+ DW 45145F45
+ DW 38410410
+ DW 04104145
+ DW 45251851
+ DW 41041041
+ DW 45B55145
+ DW 45955345
+ DW 39145145
+ DW 79145E41
+ DW 39145155
+ DW 79145E49
+ DW 39140E05
+ DW 7C410410
+ DW 45145145
+ DW 45145144
+ DW 45155555
+ DW 45128429
+ DW 45144A10
+ DW 78210841
+ DW 38820820
+ DW 01020408
+ DW 38208208
+ DW 10A44000
+ DW 00000000
+ DW 30C10000
+ DW 0003813D
+ DW 41079145
+ DW 00039141
+ DW 0413D145
+ DW 00039179
+ DW 18821E20
+ DW 0003D144
+ DW 41071249
+ DW 10010410
+ DW 08018208
+ DW 41049461
+ DW 10410410
+ DW 00069555
+ DW 00071249
+ DW 00039145
+ DW 00079145
+ DW 0003D145
+ DW 00058920
+ DW 00039038
+ DW 00878820
+ DW 00049249
+ DW 00045144
+ DW 00045155
+ DW 00049231
+ DW 00049248
+ DW 00078231
+ DW 18821820
+ DW 10410010
+ DW 30208308
+ DW 29400000
+ DW 10E6D145
+
+
+
+CHR_2
+ DH 0000
+ DH 0100
+ DH 0000
+ DH 0F280
+ DH 0C100
+ DH 34C0
+ DH 2340
+ DH 0000
+ DH 8100
+ DH 4200
+ DH 0A000
+ DH 4000
+ DH 0C308
+ DH 0000
+ DH 0C300
+ DH 0000
+ DH 1380
+ DH 4380
+ DH 07C0
+ DH 1380
+ DH 2080
+ DH 1380
+ DH 1380
+ DH 8200
+ DH 1380
+ DH 2300
+ DH 0C300
+ DH 0C308
+ DH 4080
+ DH 0F000
+ DH 4200
+ DH 0100
+ DH 0380
+ DH 1440
+ DH 1780
+ DH 1380
+ DH 1780
+ DH 07C0
+ DH 0400
+ DH 13C0
+ DH 1440
+ DH 4380
+ DH 1380
+ DH 2440
+ DH 07C0
+ DH 1440
+ DH 1440
+ DH 1380
+ DH 0400
+ DH 2340
+ DH 1440
+ DH 1380
+ DH 4100
+ DH 1380
+ DH 0A100
+ DH 5280
+ DH 1440
+ DH 4100
+ DH 0780
+ DH 8380
+ DH 1000
+ DH 2380
+ DH 0000
+ DH 003F
+ DH 0000
+ DH 13C0
+ DH 1780
+ DH 1380
+ DH 13C0
+ DH 0380
+ DH 8200
+ DH 0F04E
+ DH 2480
+ DH 4180
+ DH 248C
+ DH 4480
+ DH 4180
+ DH 1440
+ DH 2480
+ DH 1380
+ DH 1790
+ DH 13C1
+ DH 8700
+ DH 1380
+ DH 0A100
+ DH 6280
+ DH 0A100
+ DH 0F280
+ DH 2480
+ DH 0E118
+ DH 0780
+ DH 8180
+ DH 4100
+ DH 2300
+ DH 0000
+ DH 0F000

@@ -1,0 +1,303 @@
+main ()
+{
+  int hours.0;
+  int minutes.1;
+  int seconds.2;
+  char * s;
+  int i;
+
+  <D.1445>:
+  advance ();
+  s = &c;
+  hours.0 = hours;
+  setval (s, hours.0);
+  s = s + 3;
+  minutes.1 = minutes;
+  setval (s, minutes.1);
+  s = s + 3;
+  seconds.2 = seconds;
+  setval (s, seconds.2);
+  c[2] = 58;
+  c[5] = 58;
+  LCDprintA (&c);
+  i = 0;
+  goto <D.1443>;
+  <D.1442>:
+  i = i + 1;
+  <D.1443>:
+  if (i <= 47999) goto <D.1442>; else goto <D.1444>;
+  <D.1444>:
+  goto <D.1445>;
+}
+
+
+setval (char * s, int n)
+{
+  char D.1450;
+  char D.1453;
+  char D.1454;
+  char * D.1455;
+  char D.1456;
+  char m[2];
+
+  itoa (n, &m, 10);
+  D.1450 = m[1];
+  if (D.1450 == 0) goto <D.1451>; else goto <D.1452>;
+  <D.1451>:
+  D.1453 = m[0];
+  m[1] = D.1453;
+  m[0] = 48;
+  <D.1452>:
+  D.1454 = m[0];
+  *s = D.1454;
+  D.1455 = s + 1;
+  D.1456 = m[1];
+  *D.1455 = D.1456;
+}
+
+
+advance ()
+{
+  int seconds.3;
+  int seconds.4;
+  int seconds.5;
+  int minutes.6;
+  int minutes.7;
+  int minutes.8;
+  int hours.9;
+  int hours.10;
+  int hours.11;
+
+  seconds.3 = seconds;
+  seconds.4 = seconds.3 + 1;
+  seconds = seconds.4;
+  seconds.5 = seconds;
+  if (seconds.5 != 59) goto <D.1460>; else goto <D.1461>;
+  <D.1460>:
+  return;
+  <D.1461>:
+  seconds = 0;
+  minutes.6 = minutes;
+  minutes.7 = minutes.6 + 1;
+  minutes = minutes.7;
+  minutes.8 = minutes;
+  if (minutes.8 != 59) goto <D.1465>; else goto <D.1466>;
+  <D.1465>:
+  return;
+  <D.1466>:
+  minutes = 0;
+  hours.9 = hours;
+  hours.10 = hours.9 + 1;
+  hours = hours.10;
+  hours.11 = hours;
+  if (hours.11 != 23) goto <D.1470>; else goto <D.1471>;
+  <D.1470>:
+  return;
+  <D.1471>:
+  hours = 0;
+}
+
+
+LCDcaretM (int position)
+{
+
+}
+
+
+LCDshiftA (int shift)
+{
+
+}
+
+
+LCDprintW (char c3, char c2, char c1, char c0)
+{
+
+}
+
+
+LCDclearA ()
+{
+
+}
+
+
+LCDprintA (char * string)
+{
+  char D.1473;
+  char D.1476;
+  int D.1477;
+  char D.1478;
+  int D.1479;
+  char D.1480;
+  int D.1481;
+  char D.1482;
+  int D.1483;
+  char D.1486;
+  char D.1490;
+  int D.1491;
+  char D.1492;
+  int D.1493;
+  char D.1494;
+  int D.1495;
+  char D.1496;
+  int D.1497;
+  char c[4];
+  int i;
+  int j;
+
+  i = 0;
+  j = 0;
+  LCDclearA ();
+  goto <D.1408>;
+  <D.1407>:
+  D.1473 = *string;
+  c[i] = D.1473;
+  i = i + 1;
+  if (i == 4) goto <D.1474>; else goto <D.1475>;
+  <D.1474>:
+  D.1476 = c[3];
+  D.1477 = (int) D.1476;
+  D.1478 = c[2];
+  D.1479 = (int) D.1478;
+  D.1480 = c[1];
+  D.1481 = (int) D.1480;
+  D.1482 = c[0];
+  D.1483 = (int) D.1482;
+  LCDprintW (D.1483, D.1481, D.1479, D.1477);
+  j = j + 1;
+  if (j == 4) goto <D.1484>; else goto <D.1485>;
+  <D.1484>:
+  LCDcaretM (40);
+  <D.1485>:
+  i = 0;
+  <D.1475>:
+  string = string + 1;
+  <D.1408>:
+  D.1486 = *string;
+  if (D.1486 != 0) goto <D.1487>; else goto <D.1409>;
+  <D.1487>:
+  if (j <= 7) goto <D.1407>; else goto <D.1409>;
+  <D.1409>:
+  goto <D.1411>;
+  <D.1410>:
+  c[i] = 32;
+  i = i + 1;
+  if (i == 4) goto <D.1488>; else goto <D.1489>;
+  <D.1488>:
+  D.1490 = c[3];
+  D.1491 = (int) D.1490;
+  D.1492 = c[2];
+  D.1493 = (int) D.1492;
+  D.1494 = c[1];
+  D.1495 = (int) D.1494;
+  D.1496 = c[0];
+  D.1497 = (int) D.1496;
+  LCDprintW (D.1497, D.1495, D.1493, D.1491);
+  <D.1489>:
+  <D.1411>:
+  if (i <= 3) goto <D.1498>; else goto <D.1412>;
+  <D.1498>:
+  if (i > 0) goto <D.1410>; else goto <D.1412>;
+  <D.1412>:
+  LCDcaretM (24);
+}
+
+
+itoa (int broj, char * c, int baza)
+{
+  int D.1501;
+  char D.1502;
+  char D.1503;
+  char * D.1506;
+  int n;
+  char table[16];
+  char * s;
+
+  n = broj;
+  table = const.0;
+  s = c;
+  if (broj < 0) goto <D.1499>; else goto <D.1500>;
+  <D.1499>:
+  broj = -broj;
+  <D.1500>:
+  goto <D.1387>;
+  <D.1386>:
+  D.1501 = broj % baza;
+  D.1502 = table[D.1501];
+  *s = D.1502;
+  s = s + 1;
+  broj = broj / baza;
+  <D.1387>:
+  if (broj >= baza) goto <D.1386>; else goto <D.1388>;
+  <D.1388>:
+  D.1503 = table[broj];
+  *s = D.1503;
+  s = s + 1;
+  if (n < 0) goto <D.1504>; else goto <D.1505>;
+  <D.1504>:
+  *s = 45;
+  s = s + 1;
+  <D.1505>:
+  *s = 0;
+  strrev (c);
+  D.1506 = c;
+  return D.1506;
+}
+
+
+strrev (char * str)
+{
+  int D.1509;
+  unsigned int D.1510;
+  unsigned int D.1511;
+  char D.1512;
+  char * D.1513;
+  char c;
+  char * front;
+  char * back;
+
+  front = str;
+  D.1509 = strlen (str);
+  D.1510 = (unsigned int) D.1509;
+  D.1511 = D.1510 + -1;
+  back = str + D.1511;
+  goto <D.1376>;
+  <D.1375>:
+  c = *front;
+  D.1512 = *back;
+  *front = D.1512;
+  *back = c;
+  front = front + 1;
+  back = back + -1;
+  <D.1376>:
+  if (front < back) goto <D.1375>; else goto <D.1377>;
+  <D.1377>:
+  D.1513 = str;
+  return D.1513;
+}
+
+
+strlen (char * str)
+{
+  unsigned int i.12;
+  char * D.1516;
+  char D.1517;
+  int D.1518;
+  int i;
+
+  i = 0;
+  goto <D.1367>;
+  <D.1366>:
+  i = i + 1;
+  <D.1367>:
+  i.12 = (unsigned int) i;
+  D.1516 = str + i.12;
+  D.1517 = *D.1516;
+  if (D.1517 != 0) goto <D.1366>; else goto <D.1368>;
+  <D.1368>:
+  D.1518 = i;
+  return D.1518;
+}
+
+

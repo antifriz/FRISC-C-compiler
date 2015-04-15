@@ -1,0 +1,45 @@
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Compiler3_0.CEditor.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Compiler3_0.MainWindow.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Compiler3_0.Properties.Resources.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Compiler3.0.csproj.GenerateResource.Cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\installCygwin\setup-x86.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\installCygwin\setup-x86.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\string.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\delay.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\FIQ.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\IRQ.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\LCD.h
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\.atlaspar
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\.startxwinrc
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\DivideSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\DivideUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\FIQ.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\FloatToSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\FloatToUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\functList.p
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\InitGPIOB.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\IRQ.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\LCDcaretM.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\LCDclearA.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\LCDprintW.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\LCDshiftA.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\ModuloSigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\ModuloUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\MultiplySigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\Additional Functions\MultiplyUnsigned.a
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\data\AtlasTemplate.bat
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\Compiler3_0.MainWindow.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\Compiler3_0.Properties.Resources.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\Compiler3.0.csproj.GenerateResource.Cache
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\obj\Debug\Compiler3_0.CEditor.resources
+C:\Users\Ivan\Documents\Visual Studio 2008\Projects\Compiler3.0\Compiler3.0\bin\Debug\ToCopy\GPIO_B.h

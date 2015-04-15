@@ -1,0 +1,3 @@
+globalna varijabla:
+
+char buffer[80]="Upisi koliko si imao iz mat: ";

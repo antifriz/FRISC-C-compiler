@@ -1,0 +1,68 @@
+		`ORG 400
+main  
+		
+		LOAD R0, ( const0 )
+
+		MOVE 563, R1
+		
+		
+		
+		SUB SP, 000000004, SP
+		CALL atoi
+		POP R1
+		
+IO_LED `EQU 0FFFFFF10
+		
+		STORE R1, (IO_LED)
+		RET
+		
+		RET 
+
+;lokacije rs232
+IO_SIO_BYTE	`EQU	ffffff20	; byte, RW
+IO_SIO_STATUS	`EQU	ffffff21	; byte, RD
+IO_SIO_BAUD	`EQU	ffffff22	; half, WR
+
+; definicije kojekakvih bitmaska
+SIO_TX_BUSY	`EQU	04
+SIO_RX_OVERRUN	`EQU	02
+SIO_RX_FULL	`EQU	01
+
+ 
+atoi
+		PUSH R0
+		PUSH R1
+		PUSH R2
+		PUSH R3
+		LOAD R0, (SP+14)
+		MOVE 0, R2
+		
+atoi1
+		SHL R2, 3, R3
+		SHL R2, 1, R2
+		ADD R2, R3, R2
+		ADD R2, R1, R2
+		
+		LOADB R1, (R0)
+		CMP R1,30
+		JR_ULT atoi2
+				
+		CMP R1,39
+		JR_UGT atoi2
+
+		SUB R1, 30, R1
+		ADD R0, 1, R0
+		JR atoi1
+				
+atoi2	
+		STORE R2, (SP+14)			
+		POP R3
+		POP R2
+		POP R1
+		POP R0
+		RET		
+ 
+i DW 000000004
+const0 DW temp_9
+temp_9 DB 000000038, 000000020, 000000000, 000000000
+

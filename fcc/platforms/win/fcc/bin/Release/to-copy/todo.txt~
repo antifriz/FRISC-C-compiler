@@ -1,0 +1,90 @@
+Log date: 10/12/2013
+Version: v0.9.4.1.light W7/XP
+Author: ivan.jurin@fer.hr
+
+Tested on:
+-Windows 7
+-Windows XP SP2
+-linux version soon...
+
+Checking:
+-check installation procedure
+-check importing procedure
+-check built-in functions reliability
+
+To implement:
+-warn about backuping .bash_profile (.bash_profile_old at importing but 
+ overwrites last one)
+-function calls with arrays as parameters for functions 
+ (i.e. 'f(a[i]);' in gimple is left as is)
+-add all built-in functions
+
+Left unimplemented:
+-arrays of more than one dimension unimplemented
+-switch unimplemented
+-structs unimplemented
+-typedef unimplemented
+-declaring variable as extern not directly implement but there is high 
+ possibility it functions as it should (needs to be checked)
+ 
+Prereqs:
+-libmono2.0-cil
+-mono-runtime 
+ 
+SysHeaders:
+
+ 0123456789
+ 
+//rs232 
+x-char * rs_readln
+x-void rs_writeln
+x-char rs_getc
+x-void rs_putc
+x-void rs_puts
+
+//fb
+--fb_data //autoimport
+--fb_init
+--fb_writeln //textmode
+--fb_write //textmode
+--fb_puts //textmode
+--fb_gotoxy //textmode
+--fb_setpix
+--fb_getpix
+--fb_clear
+--fb_line
+--fb_circle
+
+//led
+--led_write
+--led_read
+
+//pushbut
+--btn_status
+
+//dipsw
+--sw_status
+ 
+//string
+--int strlen
+--char * strcat
+--int strcmp
+--char * strcpy
+--char * strstr
+x-char * strrev
+x-char * itoa
+--int atoi
+
+//ctype
+--isalpha
+--isdigit
+
+//stdlib
+--abs
+--rand
+
+//math
+--sin
+--pow
+
+//FRISC

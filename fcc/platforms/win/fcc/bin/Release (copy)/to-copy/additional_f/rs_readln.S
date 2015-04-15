@@ -1,0 +1,35 @@
+rs_readln
+		PUSH R0
+		PUSH R1
+		LOAD R1,(SP+0C)
+		SUB R1,1,R1
+		
+rs1readln
+		LOADB R0, (IO_SIO_STATUS)
+		AND R0, SIO_RX_FULL, R0
+		JR_Z rs1readln
+		LOADB R0, (IO_SIO_BYTE)
+				
+		
+		ADD R1,1,R1
+		CMP R0,0D ; == \r
+		JR_Z rs2readln
+		CMP R0,0A ; == \n
+		JR_Z rs2readln		
+		
+		PUSH R0
+		CALL rs_putc
+		POP R0
+		
+		STOREB R0, (R1)
+		JR rs1readln
+
+rs2readln
+		MOVE 0,R0
+		STOREB R0,(R1)
+		STORE R1,(SP+0C)
+		
+		POP R1
+		POP R0
+		RET
+

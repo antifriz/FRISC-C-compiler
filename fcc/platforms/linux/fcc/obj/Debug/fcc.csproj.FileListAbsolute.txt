@@ -1,0 +1,93 @@
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\fcc.exe
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\fcc.pdb
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\obj\Debug\fcc.exe
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\obj\Debug\fcc.pdb
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\installCygwin\setup-x86.exe
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\delay.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\FIQ.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\GPIO_B.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\IRQ.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\LCD.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\ToCopy\string.h
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\.atlaspar
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\.startxwinrc
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideSigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideUnsigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FIQ.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToSigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToUnsigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\functList.p
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\InitGPIOB.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\IRQ.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDcaretM.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDclearA.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDprintW.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDshiftA.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloSigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloUnsigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplySigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplyUnsigned.a
+C:\Documents and Settings\Ivan\My Documents\Visual Studio 2008\Projects\Compilerv4liteXP\fcc\bin\Debug\data\AtlasTemplate.bat
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\installCygwin\setup-x86.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\delay.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\FIQ.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\GPIO_B.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\IRQ.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\LCD.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\string.h
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\.atlaspar
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\.startxwinrc
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FIQ.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\functList.p
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\InitGPIOB.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\IRQ.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDcaretM.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDclearA.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDprintW.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDshiftA.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloSigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplySigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplyUnsigned.a
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\AtlasTemplate.bat
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\fcc.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\fcc.pdb
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Debug\fcc.exe
+C:\Documents and Settings\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Debug\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Debug\fcc.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\obj\Debug\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\installCygwin\setup-x86.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\delay.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\FIQ.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\GPIO_B.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\IRQ.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\LCD.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\ToCopy\string.h
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\.atlaspar
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\.startxwinrc
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\DivideUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FIQ.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\FloatToUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\functList.p
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\InitGPIOB.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\IRQ.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDcaretM.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDclearA.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDprintW.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\LCDshiftA.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloSigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\ModuloUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplySigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\Additional Functions\MultiplyUnsigned.a
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\data\AtlasTemplate.bat
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\fcc.exe
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\fcc.pdb
+C:\Users\Ivan\Desktop\Compilerv4liteXP\fcc\bin\Debug\help.txt

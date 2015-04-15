@@ -1,0 +1,11 @@
+#include <string.h>
+#include <rs232.h>
+
+int main()
+{
+	char buffer[80];
+	rs_init();
+	rs_readln(buffer);
+	rs_writeln(strrev(buffer));
+	return 0;
+}

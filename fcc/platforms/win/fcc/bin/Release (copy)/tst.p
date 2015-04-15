@@ -1,0 +1,181 @@
+                       		`ORG 400 
+00000400  04 00 F0 37  		SUB SP,4,SP 
+00000404  10 04 00 CC  		CALL main 
+00000408  04 00 F0 27  		ADD SP,4,SP 
+0000040C  00 00 00 D8  		RET 
+                       main   
+00000410  00 00 00 88  		PUSH R0 
+00000414  00 00 80 88  		PUSH R1 
+00000418  08 00 F0 37  		SUB SP, 000000008, SP 
+0000041C  10 06 00 04  		MOVE const4, R0 
+00000420  00 00 70 BC  		STORE R0, ( SP + 000000000 ) 
+00000424  04 00 F0 37  		SUB SP, 000000004, SP 
+00000428  C4 04 00 CC  		CALL rs_init 
+0000042C  04 00 F0 27  		ADD SP, 000000004, SP 
+00000430  CC 05 00 B0  		LOAD R0, ( const0 ) 
+00000434  FC FF 7F BC  		STORE R0, ( SP-000000004 ) 
+00000438  04 00 F0 37  		SUB SP, 000000004, SP 
+0000043C  38 05 00 CC  		CALL rs_writeln 
+00000440  04 00 F0 27  		ADD SP, 000000004, SP 
+00000444  00 00 70 B4  		LOAD R0, ( SP + 000000000 ) 
+00000448  FC FF 7F BC  		STORE R0, ( SP-000000004 ) 
+0000044C  04 00 F0 37  		SUB SP, 000000004, SP 
+00000450  6C 05 00 CC  		CALL rs_readln 
+00000454  04 00 F0 27  		ADD SP, 000000004, SP 
+00000458  F0 05 80 B0  		LOAD R1, ( const1 ) 
+0000045C  FC FF FF BC  		STORE R1, ( SP-000000004 ) 
+00000460  04 00 F0 37  		SUB SP, 000000004, SP 
+00000464  38 05 00 CC  		CALL rs_writeln 
+00000468  04 00 F0 27  		ADD SP, 000000004, SP 
+0000046C  F8 05 80 B0  		LOAD R1, ( const2 ) 
+00000470  FC FF FF BC  		STORE R1, ( SP-000000004 ) 
+00000474  04 00 F0 37  		SUB SP, 000000004, SP 
+00000478  C8 04 00 CC  		CALL rs_puts 
+0000047C  04 00 F0 27  		ADD SP, 000000004, SP 
+00000480  FC FF 7F BC  		STORE R0, ( SP-000000004 ) 
+00000484  04 00 F0 37  		SUB SP, 000000004, SP 
+00000488  C8 04 00 CC  		CALL rs_puts 
+0000048C  04 00 F0 27  		ADD SP, 000000004, SP 
+00000490  04 06 00 B0  		LOAD R0, ( const3 ) 
+00000494  FC FF 7F BC  		STORE R0, ( SP-000000004 ) 
+00000498  04 00 F0 37  		SUB SP, 000000004, SP 
+0000049C  38 05 00 CC  		CALL rs_writeln 
+000004A0  04 00 F0 27  		ADD SP, 000000004, SP 
+000004A4  00 00 80 04  		MOVE 000000000, R1 
+000004A8  04 00 F0 BC  		STORE R1, ( SP + 000000004 ) 
+000004AC  04 00 70 B4  		LOAD R0, ( SP + 000000004 ) 
+000004B0  0C 00 70 BC  		STORE R0, ( SP + 00000000C ) 
+000004B4  08 00 F0 27  		ADD SP, 000000008, SP 
+000004B8  00 00 80 80  		POP R1 
+000004BC  00 00 00 80  		POP R0 
+000004C0  00 00 00 D8  		RET  
+                       rs_init  
+000004C4  00 00 00 D8  	RET 
+                       ;lokacije rs232 
+                       IO_SIO_BYTE	`EQU	ffffff20	; byte, RW 
+                       IO_SIO_STATUS	`EQU	ffffff21	; byte, RD 
+                       IO_SIO_BAUD	`EQU	ffffff22	; half, WR 
+                        
+                       ; definicije kojekakvih bitmaska 
+                       SIO_TX_BUSY	`EQU	04 
+                       SIO_RX_OVERRUN	`EQU	02 
+                       SIO_RX_FULL	`EQU	01 
+                       	 
+                         
+                       rs_puts 
+000004C8  00 00 00 88  		PUSH R0 
+000004CC  00 00 80 88  		PUSH R1 
+000004D0  00 00 00 89  		PUSH R2 
+000004D4  10 00 F0 B4  		LOAD R1, (SP+010) 
+                        
+                       rs1puts	 
+000004D8  00 00 10 94  		LOADB R0, (R1) 
+000004DC  00 00 00 6C  		CMP R0, 0 
+000004E0  18 00 C0 D5  		JR_Z rs3puts 
+                       		 
+                       rs2puts 
+000004E4  21 FF 0F 91  		LOADB R2, (IO_SIO_STATUS) 
+000004E8  04 00 20 15  		AND R2, SIO_TX_BUSY, R2 
+000004EC  F4 FF 0F D6  		JR_NZ rs2puts 
+000004F0  20 FF 0F 98  		STOREB R0, (IO_SIO_BYTE)	 
+000004F4  01 00 90 24  		ADD R1, 1, R1 
+000004F8  DC FF 0F D4  		JR rs1puts		 
+                        
+                       rs3puts		 
+000004FC  00 00 00 81  		POP R2 
+00000500  00 00 80 80  		POP R1 
+00000504  00 00 00 80  		POP R0 
+00000508  00 00 00 D8  		RET 
+                         
+                       rs_putc		 
+0000050C  00 00 00 88  		PUSH R0 
+00000510  00 00 80 88  		PUSH R1 
+00000514  0C 00 70 B4  		LOAD R0, (SP+0C) 
+                       		 
+                       rs1putc 
+00000518  21 FF 8F 90  		LOADB R1, (IO_SIO_STATUS) 
+0000051C  04 00 90 14  		AND R1, SIO_TX_BUSY, R1 
+00000520  F4 FF 0F D6  		JR_NZ rs1putc 
+00000524  20 FF 0F 98  		STOREB R0, (IO_SIO_BYTE) 
+00000528  00 00 80 80  		POP R1 
+0000052C  00 00 00 80  		POP R0 
+00000530  00 00 00 D8  		RET 
+                         
+                       rs_getc   
+00000534  00 00 00 D8  		RET  
+                       ;using rs_putc 
+                       ;using rs_puts 
+                       rs_writeln 
+00000538  00 00 80 88  		PUSH R1 
+                       		 
+0000053C  08 00 F0 B4  		LOAD R1, (SP+8) ; txt 
+00000540  00 00 80 88  		PUSH R1 
+00000544  C8 04 00 CC  		CALL rs_puts 
+                        
+00000548  0A 00 80 04  		MOVE 0A, R1 ; \r 
+0000054C  00 00 F0 BC  		STORE R1, (SP) 
+00000550  0C 05 00 CC  		CALL rs_putc 
+                        
+00000554  0D 00 80 04  		MOVE 0D,R1 ; \n 
+00000558  00 00 F0 BC  		STORE R1, (SP) 
+0000055C  0C 05 00 CC  		CALL rs_putc 
+00000560  04 00 F0 27  		ADD SP,4,SP 
+                        
+00000564  00 00 80 80  		POP R1 
+00000568  00 00 00 D8  		RET	 
+                         
+                       rs_readln 
+0000056C  00 00 00 88  		PUSH R0 
+00000570  00 00 80 88  		PUSH R1 
+00000574  0C 00 F0 B4  		LOAD R1,(SP+0C) 
+00000578  01 00 90 34  		SUB R1,1,R1 
+                       		 
+                       rs1readln 
+0000057C  21 FF 0F 90  		LOADB R0, (IO_SIO_STATUS) 
+00000580  01 00 00 14  		AND R0, SIO_RX_FULL, R0 
+00000584  F4 FF CF D5  		JR_Z rs1readln 
+00000588  20 FF 0F 90  		LOADB R0, (IO_SIO_BYTE) 
+                       				 
+                       		 
+0000058C  01 00 90 24  		ADD R1,1,R1 
+00000590  0D 00 00 6C  		CMP R0,0D ; == \r 
+00000594  1C 00 C0 D5  		JR_Z rs2readln 
+00000598  0A 00 00 6C  		CMP R0,0A ; == \n 
+0000059C  14 00 C0 D5  		JR_Z rs2readln		 
+                       		 
+000005A0  00 00 00 88  		PUSH R0 
+000005A4  0C 05 00 CC  		CALL rs_putc 
+000005A8  00 00 00 80  		POP R0 
+                       		 
+000005AC  00 00 10 9C  		STOREB R0, (R1) 
+000005B0  C8 FF 0F D4  		JR rs1readln 
+                        
+                       rs2readln 
+000005B4  00 00 00 04  		MOVE 0,R0 
+000005B8  00 00 10 9C  		STOREB R0,(R1) 
+000005BC  0C 00 F0 BC  		STORE R1,(SP+0C) 
+                       		 
+000005C0  00 00 80 80  		POP R1 
+000005C4  00 00 00 80  		POP R0 
+000005C8  00 00 00 D8  		RET 
+                        
+                         
+000005CC  D0 05 00 00  const0 DW temp_1 
+000005D0  4B 6F 6C 69  temp_1 DB 00000004B, 00000006F, 00000006C, 000000069 
+000005D4  6B 6F 20 69  		DB 00000006B, 00000006F, 000000020, 000000069 
+000005D8  6D 61 73 20  		DB 00000006D, 000000061, 000000073, 000000020 
+000005DC  67 6F 64 69  		DB 000000067, 00000006F, 000000064, 000000069 
+000005E0  6E 61 20 70  		DB 00000006E, 000000061, 000000020, 000000070 
+000005E4  69 74 61 68  		DB 000000069, 000000074, 000000061, 000000068 
+000005E8  20 74 65 3F  		DB 000000020, 000000074, 000000065, 00000003F 
+000005EC  00 00 00 00  		DB 000000000, 000000000, 000000000, 000000000 
+000005F0  F4 05 00 00  const1 DW temp_2 
+000005F4  00 00 00 00  temp_2 DB 000000000, 000000000, 000000000, 000000000 
+000005F8  FC 05 00 00  const2 DW temp_3 
+000005FC  49 6D 61 73  temp_3 DB 000000049, 00000006D, 000000061, 000000073 
+00000600  20 00 00 00  		DB 000000020, 000000000, 000000000, 000000000 
+00000604  08 06 00 00  const3 DW temp_4 
+00000608  20 67 6F 64  temp_4 DB 000000020, 000000067, 00000006F, 000000064 
+0000060C  69 6E 61 00  		DB 000000069, 00000006E, 000000061, 000000000 
+00000610  14 06 00 00  const4 DW temp_5 
+                       temp_5 `DS 80 
